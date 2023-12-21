@@ -1,0 +1,19 @@
+on:
+  schedule:
+    # run every week on Monday
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+name: pull-dev-to-main
+jobs:
+  createPullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create Report
+        run: date +%s > report.txt
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Add report file
+          title: '[Example] Add report file'
+          labels: report, automated pr
