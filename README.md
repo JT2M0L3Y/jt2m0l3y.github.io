@@ -1,30 +1,30 @@
-# JT2M0L3Y Portfolio Website
+# React + TypeScript + Vite
 
-This is the source code for my personal website.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Quick Start
+Currently, two official plugins are available:
 
-The quickest way to get this project up & running is to follow these steps:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-1. clone this repo
-2. run `npm install`
-3. run `npm start`
+## Expanding the ESLint configuration
 
-This should provide a local instance of the project for you to peruse at your leisure.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Features
+- Configure the top-level `parserOptions` property like this:
 
-Included in this project is essentially my resume, but it is more than that. This website provides a detailing of any and all tools and/or projects that I have worked on.
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-* about me
-* projects I've done
-* tools I've run into
-* how to contact me
-
-## Contributing
-
-There is no expectation that anyone else will contribute or utilize this project in any way at the current time.
-
-## License
-
-This project is [unlicensed](LICENSE.md)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

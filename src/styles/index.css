@@ -1,0 +1,7 @@
+:root {
+  --color-primary: #242424;
+  --color-secondary: #bd3436;
+  --color-font: #f2dbd1;
+  background-color: var(--color-primary);
+  font-family: 'proxima-nova', sans-serif;
+}

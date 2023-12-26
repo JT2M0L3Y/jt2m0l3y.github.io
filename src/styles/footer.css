@@ -1,0 +1,62 @@
+.footer {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+  border-top: 3px solid var(--color-font);
+  position: fixed;
+  height: 10%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: var(--color-font);
+}
+
+.copywrite-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5%;
+}
+
+.copywrite {
+  font-size: 15px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.copywrite a {
+  color: var(--color-font);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin-right: 2.5%;
+}
+
+.social {
+  margin: 0 10px;
+  color: var(--color-font);
+  font-size: 22px;
+  background-image: linear-gradient(45deg, var(--color-font) 50%, transparent 50%);
+  background-size: 350% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease;
+  border-radius: 2px;
+}
+
+.social:hover {
+  background-position: left top;
+  color: var(--color-secondary);
+  transition: 0.5s;
+}
+
+.social:active {
+  color: var(--color-primary);
+  transition: 0.5s;
+}
